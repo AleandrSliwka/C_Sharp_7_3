@@ -15,27 +15,12 @@ else if (a < 1000)
   a = a % 10;
   Console.WriteLine($"Третья цифра заданного числа: {a}");
 }
-else if (a < 10000)
+else if (a > 999)
 {
-  a = a / 10;
-  a = a % 10;
-  Console.WriteLine($"Третья цифра заданного числа: {a}");
-}
-else if (a < 100000)
-{
-  a = a / 100;
-  a = a % 10;
-  Console.WriteLine($"Третья цифра заданного числа: {a}");
-}
-else if (a < 1000000)
-{
-  a = a / 1000;
-  a = a % 10;
-  Console.WriteLine($"Третья цифра заданного числа: {a}");
-}
-else if (a < 10000000)
-{
-  a = a / 10000;
+  while (a > 999)
+  {
+    a = a / 10;
+  }
   a = a % 10;
   Console.WriteLine($"Третья цифра заданного числа: {a}");
 }
