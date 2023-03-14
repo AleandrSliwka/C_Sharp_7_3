@@ -8,39 +8,46 @@
 
 Console.WriteLine("Введите номер дня недели: ");
 int day = int.Parse(Console.ReadLine()!);
-if (day == 1)
+int Weekend(int num)
 {
-  Console.WriteLine("Понедельник - Рабочий день!");
+  if (num < 6 && num > 0) Console.WriteLine("Будни - рабочий день");
+  else if (num == 6 || num == 7) Console.WriteLine("Выходной");
+  else Console.WriteLine("Не относится к дням недели");
+  return num;
 }
-else if (day == 2)
-{
-  Console.WriteLine("Вторник - Рабочий день!");
-}
-else if (day == 3)
-{
-  Console.WriteLine("Среда - Рабочий день!");
-}
-else if (day == 4)
-{
-  Console.WriteLine("Четверг - Рабочий день!");
-}
-else if (day == 5)
-{
-  Console.WriteLine("Пятница - Рабочий день!");
-}
-else if (day == 6)
-{
-  Console.WriteLine("Суббота - Выходной день!");
-}
-else if (day == 7)
-{
-  Console.WriteLine("Воскресенье - Выходной день!");
-}
-else
-  Console.WriteLine("Данное число не относиться к дням недели!");
+Weekend(day);
 
 /*
+
 Второе решение:
+
+Console.WriteLine("Введите номер дня недели: ");
+int day = int.Parse(Console.ReadLine()!);
+
+void Weekend(int num)
+{
+  string text = "Не относится к дням недели";
+  if (num < 6 && num > 0) text = "Будни - рабочий день";
+  else if (num == 6 || num == 7) text = "Выходной";
+  Console.WriteLine($"{num} - {text}");
+}
+
+Weekend(day);
+
+Третье решение:
+
+Console.WriteLine("Введите номер дня недели: ");
+int day = int.Parse(Console.ReadLine()!);
+if (day == 1) Console.WriteLine("Понедельник - Рабочий день!");
+else if (day == 2) Console.WriteLine("Вторник - Рабочий день!");
+else if (day == 3) Console.WriteLine("Среда - Рабочий день!");
+else if (day == 4) Console.WriteLine("Четверг - Рабочий день!");
+else if (day == 5) Console.WriteLine("Пятница - Рабочий день!");
+else if (day == 6) Console.WriteLine("Суббота - Выходной день!");
+else if (day == 7) Console.WriteLine("Воскресенье - Выходной день!");
+else Console.WriteLine("Данное число не относиться к дням недели!");
+
+Четвертое решение:
 
 Console.WriteLine("Введите номер дня недели: ");
 int day = int.Parse(Console.ReadLine()!);
