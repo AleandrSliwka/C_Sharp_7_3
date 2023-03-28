@@ -34,27 +34,13 @@ void Print1(int[,] arr)
 int[,] RandMass(int size, int size1, int from, int to)
 {
   int[,] arr = new int[size, size1];
-  //int[,] copy = arr.Clone() as int[,];
-  int[,] copy = new int[size, size1];
 
   for (int i = 0; i < arr.GetLength(0); i++)
   {
     for (int j = 0; j < arr.GetLength(1); j++)
-    {
       arr[i, j] = new Random().Next(from, to + 1);
-    }
   }
   return arr;
-
-  for (int i1 = 0; i1 < copy.GetLength(0); i1++)
-  {
-    for (int j1 = 0; j1 < copy.GetLength(1); j1++)
-    {
-      Console.Write($"{copy[i1, j1]}");
-    }
-    Console.WriteLine();
-  }
-  return copy;
 }
 
 
